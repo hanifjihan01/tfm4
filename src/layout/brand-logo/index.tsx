@@ -1,7 +1,7 @@
 import { CustomLink } from '@/src/components/custom-link';
 import Image from 'next/image';
 
-import logoLight from 'public/assets/images/brand/logotransforme02.png';
+import logoLight from 'public/assets/images/brand/brand-transformer.png';
 import logoDark from 'public/assets/images/brand/logotransforme02.png';
 
 export function BrandLogo() {

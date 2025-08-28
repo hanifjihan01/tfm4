@@ -29,7 +29,7 @@ export function StatCard({ icon, title, value, counterSuffix }: StatCardProps) {
         <span className="sr-only">Counter</span>
       </h3>
 
-      <p className="white:text-white mt-1 dark:text-accent-900">{title}</p>
+      <p className="mt-1 text-accent-900">{title}</p>
     </div>
   );
 }

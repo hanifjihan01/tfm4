@@ -18,7 +18,7 @@ export function TestimonialSection() {
   const { sectionHeading, cards } = testimonialSectionData;
 
   return (
-    <section className="section-padding-primary overflow-hidden">
+    <section className="section-padding-primary overflow-hidden bg-accent-900">
       <Container>
         <div className="mb-10 flex justify-center text-center md:mb-[3.75rem]">
           <div className="max-w-[680px]">

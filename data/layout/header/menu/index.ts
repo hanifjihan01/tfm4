@@ -27,17 +27,12 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
   //   ],
   // },
   {
-    title: 'Products',
-    subMenuItems: [
-      {
-        label: 'Artificial Inteligent (AI)',
-        href: '/services',
-      },
-      {
-        label: 'Internet Of Things (IOT)',
-        href: '/iot',
-      },
-    ],
+    label: 'Products',
+    href: '/',
+  },
+  {
+    label: 'Solutions',
+    href: '/',
   },
   // {
   //   title: 'Solutions',
@@ -55,10 +50,10 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
 
   {
     label: 'Contact',
-    href: '/#contact',
+    href: '/',
   },
   {
     label: 'Request Support',
-    href: '/contact',
+    href: '/',
   },
 ];

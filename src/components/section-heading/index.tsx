@@ -25,7 +25,7 @@ export function SectionHeading({
 
   return (
     <div className={wrapperClasses}>
-      <h2 className="text-center font-secondary text-xl font-bold leading-[1.25] text-accent-900 dark:text-white md:text-2xl">
+      <h2 className="text-center font-secondary text-xl font-bold leading-[1.25] text-white dark:text-white md:text-2xl">
         {title}
       </h2>
       {subtitle && (
@@ -34,7 +34,7 @@ export function SectionHeading({
         </span>
       )}
       {description && (
-        <p className="mt-2 whitespace-pre-line text-accent-900 dark:text-white">
+        <p className="mt-2 whitespace-pre-line text-white dark:text-white">
           {description}
         </p>
       )}

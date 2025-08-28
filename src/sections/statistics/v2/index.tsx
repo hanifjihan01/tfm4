@@ -14,10 +14,16 @@ export function StatisticsSection({ className }: SectionProps) {
   const { statistics } = statisticsSectionData;
 
   return (
-    <section className={cn(className)}>
+    <section
+      className={cn('relative -mt-20 pb-12 pt-16', className)}
+      style={{
+        background:
+          'linear-gradient(to bottom, #38bdf8 0% 50%, transparent 50% 100%)',
+      }}
+    >
       <Container>
         {statistics && statistics.length > 0 && (
-          <div className="rounded-xl p-6 shadow-lg dark:bg-white ">
+          <div className="relative z-10 rounded-xl bg-accent-800 p-6 shadow-lg">
             <div className="flex flex-wrap justify-between gap-y-6">
               {statistics.map((stat, index) => (
                 <div key={index} className="min-w-[200px] flex-1">

@@ -4,7 +4,7 @@ import { LinkProps } from '@/src/common-types';
 import { Container } from '@/src/components/container';
 import { BrandLogo } from '../../../brand-logo';
 import { ContactBox, ContactBoxProps } from './contact-box';
-import { useStickyHeader } from '../../utils/use-sticky-header';
+
 import { cn } from '@/src/utils/shadcn';
 import { Navigation } from '../common/navigation';
 import { headerData } from 'data/layout/header/v1';
@@ -21,15 +21,12 @@ export interface HeaderProps {
 
 export function Header() {
   const { menuItems, contactInfo } = headerData;
-  const isSticky = useStickyHeader(700);
 
   return (
     <header
       className={cn(
-        'left-0 right-0 top-0 z-99 mx-auto hidden w-full py-[26px] lg:block',
-        isSticky
-          ? 'sticky-header fixed left-0 top-0 w-full animate-fadeInDown bg-white/90 backdrop-blur-md [box-shadow:0px_0px_15px_10px_rgba(74,196,243,0.3)] dark:bg-accent-900/90'
-          : 'absolute'
+        'left-0 right-0 top-0 z-99 mx-auto hidden w-full py-[10px] lg:block',
+        'fixed left-0 top-0 w-full bg-white/90 backdrop-blur-md [box-shadow:0px_0px_15px_10px_rgba(223,42,25,.1)] dark:bg-accent-900/90'
       )}
     >
       <Container>

@@ -92,12 +92,10 @@ export function TestimonialCard({
             </svg>
           </span>
         </motion.div>
-        <h3 className="text-md font-bold leading-tight text-accent-900 dark:text-white md:text-lg">
+        <h3 className="text-md font-bold leading-tight text-white dark:text-white md:text-lg">
           {name}
         </h3>
-        <p className="text-accent-600 mt-1 text-sm dark:text-accent-200">
-          {about}
-        </p>
+        <p className="mt-1 text-sm text-white dark:text-white">{about}</p>
       </motion.div>
     </motion.div>
   );

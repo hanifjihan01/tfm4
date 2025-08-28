@@ -13,7 +13,7 @@ export function NewsletterForm() {
 
   return (
     <div className="space-y-4">
-      <p className="text-sm text-accent-800 dark:text-body">
+      <p className="text-sm text-white dark:text-body">
         Please enter your e-mail if you want to receive updates
       </p>
       <form onSubmit={handleSubmit} className="flex items-center gap-2">

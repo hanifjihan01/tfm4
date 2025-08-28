@@ -4,7 +4,6 @@ import { Container } from '@/src/components/container';
 import { CustomLink } from '@/src/components/custom-link';
 import { cn } from '@/src/utils/shadcn';
 
-import { BrandLogo } from 'src/layout/brand-logo';
 import { FaChevronRight } from 'react-icons/fa6';
 
 import { NewsletterForm } from '@/data/layout/footer/v1/NewsletterForm';
@@ -47,7 +46,7 @@ export interface FooterSectionProps {
 }
 
 const titleClasses = cn(
-  'text-gray-900 dark:text-white  text-md font-bold  leading-[1.25] md:text-lg mb-5 md:mb-[1.875rem]'
+  'text-white dark:text-white  text-md font-bold  leading-[1.25] md:text-lg mb-5 md:mb-[1.875rem]'
 );
 
 const addressItemClasses = cn('flex items-center gap-5');
@@ -62,17 +61,16 @@ export function Footer({ className }: SectionProps) {
     <footer
       id="contact"
       className={cn(
-        'overflow-hidden bg-white text-accent-800 dark:bg-accent-900 dark:text-body',
+        'overflow-hidden bg-accent-900 text-accent-800 dark:bg-accent-900 dark:text-body',
         className
       )}
     >
-      <div className="py-16 md:py-20">
+      <div className=" py-16 text-white md:mr-44 md:py-20">
         <Container>
           <div className="grid gap-10 md:grid-cols-2  xl:grid-cols-4">
             {/* About  */}
             <div data-aos="fade-up" data-aos-delay="200">
-              <BrandLogo />
-              <p className="mb-7 mt-3">{about.description}</p>
+              <p className="mb-7 mt-3 ">{about.description}</p>
               {about.socialLinks && about.socialLinks.length > 0 && (
                 <nav aria-label="social links">
                   <ul className="mt-6 flex items-center gap-3"></ul>
@@ -89,9 +87,9 @@ export function Footer({ className }: SectionProps) {
                     {columnOne.links.map((link) => (
                       <li
                         key={link.label}
-                        className="flex items-center gap-2.5"
+                        className="flex items-center gap-2.5 text-white"
                       >
-                        <span className="flex-none text-sm/[1] text-gray-900 dark:text-white">
+                        <span className="flex-none text-sm/[1] text-white dark:text-white">
                           <FaChevronRight />
                         </span>
                         <CustomLink
@@ -154,11 +152,13 @@ export function Footer({ className }: SectionProps) {
                       <li key={index}>
                         <CustomLink
                           aria-label={socialLink.href}
-                          className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white transition hover:bg-gray-800"
+                          className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-white transition hover:bg-gray-800"
                           href={socialLink.href}
                           openNewTab
                         >
-                          <span className="text-base">{socialLink.icon}</span>
+                          <span className="bg-accent-900 text-base">
+                            {socialLink.icon}
+                          </span>
                         </CustomLink>
                       </li>
                     ))}
@@ -166,9 +166,10 @@ export function Footer({ className }: SectionProps) {
                 </nav>
               )}
             </div>
+
+            {/* Column three  */}
             <div data-aos="fade-up" data-aos-delay="800">
               <h3 className={titleClasses}>{columnThree.title}</h3>
-              {/* Column three  */}
               <NewsletterForm />
             </div>
           </div>

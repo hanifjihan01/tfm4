@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { aboutSectionData } from '@/data/about-section/v1';
 import { Container } from '@/src/components/container';
 
@@ -28,67 +27,31 @@ export function AboutSection() {
   const { vissionMission, visionMission } = aboutSectionData;
 
   return (
-    <motion.section
+    <section
       id="about-us"
-      initial={{ opacity: 0, y: 60 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
-      className="section-padding-primary overflow-hidden"
+      className="section-padding-primary overflow-hidden bg-accent-900"
     >
       <Container>
         <div className="flex justify-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="w-full max-w-7xl rounded-xl border border-t-0 border-gray-300 bg-accent-900 p-8 text-center text-accent-900 shadow-[4px_4px_12px_rgba(0,0,0,0.05),-4px_4px_12px_rgba(0,0,0,0.05)] dark:text-white"
-          >
+          <div className="w-full max-w-7xl rounded-xl border border-t-0 border-accent-800 bg-accent-800 p-8 text-center text-white shadow-[4px_4px_12px_rgba(0,0,0,0.05),-4px_4px_12px_rgba(0,0,0,0.05)]">
             {vissionMission?.vision && (
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-                className="mt-6"
-              >
+              <div className="mt-6">
                 <h4 className="text-xl font-bold text-white">About Us</h4>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5, duration: 0.6 }}
-                  className="mt-2"
-                >
-                  {vissionMission.vision}
-                </motion.p>
-              </motion.div>
+                <p className="mt-2">{vissionMission.vision}</p>
+              </div>
             )}
 
             {visionMission?.vision && (
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.7, duration: 0.6 }}
-                className="mt-6"
-              >
+              <div className="mt-6">
                 <h4 className="text-xl font-bold text-white">
                   Vision & Mission
                 </h4>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.9, duration: 0.6 }}
-                  className="mt-2"
-                >
-                  {visionMission.vision}
-                </motion.p>
-              </motion.div>
+                <p className="mt-2">{visionMission.vision}</p>
+              </div>
             )}
-          </motion.div>
+          </div>
         </div>
       </Container>
-    </motion.section>
+    </section>
   );
 }
