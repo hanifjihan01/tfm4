@@ -2,7 +2,7 @@ import { CustomLink } from '@/src/components/custom-link';
 import Image from 'next/image';
 
 import logoLight from 'public/assets/images/brand/brand-transformer.png';
-import logoDark from 'public/assets/images/brand/logotransforme02.png';
+// import logoDark from 'public/assets/images/brand/logotransforme02.png';
 
 export function BrandLogo() {
   return (
@@ -19,12 +19,12 @@ export function BrandLogo() {
         priority
       />
       <Image
-        className="logo-dark hidden dark:block"
-        src={logoDark.src}
-        width={logoDark.width}
-        height={logoDark.height}
+        className="logo-light hidden dark:block"
+        src={logoLight.src}
+        width={logoLight.width}
+        height={logoLight.height}
         placeholder="blur"
-        blurDataURL={logoDark.blurDataURL}
+        blurDataURL={logoLight.blurDataURL}
         alt={`${process.env.NEXT_PUBLIC_SITE_NAME} brand logo`}
         sizes="100vw"
         priority
